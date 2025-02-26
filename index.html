@@ -342,9 +342,28 @@
     <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
 
 
+    <script>
+        function isMobileDevice() {
+            return window.innerWidth <= 800; // Adjust threshold as needed
+        }
+
+        function blockMobileUsers() {
+            if (isMobileDevice()) {
+                document.documentElement.innerHTML = `
+                    <div style="text-align: center; margin-top: 250px; padding: 50px; font-size: 18px;">
+                        Please open this website on a larger screen like a laptop for a better experience.
+                    </div>
+                `;
+            }
+        }
+
+        blockMobileUsers();
+        window.addEventListener("resize", blockMobileUsers);
+    </script>
+
 
     
-    <script>
+    <!-- <script>
         function isMobileDevice() {
             return window.innerWidth <= 800; // Adjust as per your requirement
         }
@@ -353,6 +372,9 @@
             document.body.innerHTML = "<div style='text-align: center; margin-top:250px; padding: 50px; font-size: 18px;'>Please open this website on a larger screen like Laptop for a better experience.</div>";
         }
     </script>
+    
+    -->
+
     <script src="main.js"></script>
 
 </body>
