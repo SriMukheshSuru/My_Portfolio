@@ -276,5 +276,15 @@
 
 
     <script src="main.js"></script> 
+    <script>
+        function isMobileDevice() {
+            return window.innerWidth <= 768; // Adjust as per your requirement
+        }
+
+        if (isMobileDevice()) {
+            document.body.innerHTML = "<div style='text-align: center; padding: 50px; font-size: 18px;'>Please open this website on a larger screen like Laptop for a better experience.</div>";
+        }
+    </script>
+
 </body>
 </html>
